@@ -9,7 +9,7 @@ import sketchChart from "@/assets/sketch-chart.png";
 import sketchPie from "@/assets/sketch-pie.png";
 import sketchLine from "@/assets/sketch-line.png";
 import sketchData from "@/assets/sketch-data.png";
-import sketchBars from "@/assets/sketch-bars.png";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -321,6 +321,9 @@ function Greenletter() {
             Iscriviti su Substack
           </a>
         </div>
+        <p className="mt-6 text-xs leading-relaxed max-w-xl mx-auto" style={{ color: "rgba(11,20,16,0.6)" }}>
+          Iscrivendoti acconsenti al trattamento dei tuoi dati personali (indirizzo email) ai soli fini dell'invio della greenletter, ai sensi del Reg. UE 2016/679 (GDPR). Puoi cancellarti in qualsiasi momento. Maggiori informazioni nell'<Link to="/privacy" className="underline">informativa privacy</Link>.
+        </p>
       </div>
     </section>
   );
