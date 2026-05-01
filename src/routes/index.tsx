@@ -300,6 +300,31 @@ function Metodo() {
   );
 }
 
+function Greenletter() {
+  return (
+    <section id="greenletter" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute -top-10 -left-10 w-80 rotate-[-12deg] hidden md:block" width={768} height={768} />
+      <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute bottom-0 right-0 w-72 hidden md:block" width={768} height={768} />
+      <div className="max-w-3xl mx-auto px-6 text-center reveal relative">
+        <div className="label-mono label-mono-teal flex items-center justify-center gap-2">
+          <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: "var(--teal-deep)" }} /> 05 / GREENLETTER
+        </div>
+        <h2 className="mt-6 font-display font-black text-4xl sm:text-5xl lg:text-6xl">
+          La <span className="highlight-mark">greenletter</span> di sì.
+        </h2>
+        <p className="mt-8 text-lg leading-relaxed" style={{ color: "rgba(11,20,16,0.75)" }}>
+          Una newsletter mensile su normativa ESG, dati di sostenibilità e analisi pratica per chi guida una PMI. Niente buzzword, solo informazione utile.
+        </p>
+        <div className="mt-10">
+          <a href="https://substack.com/" target="_blank" rel="noopener noreferrer" className="inline-block font-mono uppercase text-xs tracking-[0.2em] px-8 py-4 transition-colors" style={{ background: "var(--teal-deep)", color: "var(--light-bg)" }}>
+            Iscriviti su Substack
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contatti() {
   return (
     <section id="contatti" className="section-light py-32 lg:py-40 border-t border-border-soft relative overflow-hidden">
