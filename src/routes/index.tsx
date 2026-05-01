@@ -4,10 +4,12 @@ import patriziaImg from "@/assets/patrizia.jpg";
 import patriziaImg2 from "@/assets/patrizia-2.jpg";
 import sketchBank from "@/assets/sketch-bank.png";
 import sketchLeaf from "@/assets/sketch-leaf.png";
-import sketchScale from "@/assets/sketch-scale.png";
 import sketchFactory from "@/assets/sketch-factory.png";
 import sketchChart from "@/assets/sketch-chart.png";
 import sketchPie from "@/assets/sketch-pie.png";
+import sketchLine from "@/assets/sketch-line.png";
+import sketchData from "@/assets/sketch-data.png";
+import sketchBars from "@/assets/sketch-bars.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
