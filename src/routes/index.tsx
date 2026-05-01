@@ -377,6 +377,7 @@ function Footer() {
             {["Servizi", "Normativa", "Chi sono", "Metodo", "Greenletter", "Contatti"].map((l) => (
               <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">{l}</a>
             ))}
+            <Link to="/privacy" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">Privacy</Link>
           </nav>
           <div className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted space-y-1 text-right">
             <div>Patrizia Parca · Data Analyst · ESG Reporting</div>
