@@ -130,8 +130,16 @@
     pointer-events: none;
     user-select: none;
   }
-  .sketch-dark { filter: invert(1) brightness(1.6); opacity: 0.42; }
-  .sketch-light { opacity: 0.7; }
+  .sketch-dark { filter: invert(1) brightness(1.6); opacity: 0.18; }
+  .sketch-light { opacity: 0.28; }
+  .greenletter-bg {
+    background-color: #cfe3d4;
+    color: var(--ink);
+  }
+  .greenletter-bg .label-mono { color: rgba(11,20,16,0.55); }
+  .greenletter-bg .label-mono-teal { color: var(--teal-deep); }
+  .greenletter-bg h2 { color: var(--ink); }
+  .greenletter-bg em { color: var(--teal-deep); }
   .highlight-mark.dark-bg { color: var(--ink); }
   .service-row {
     transition: padding-left 0.2s ease, border-color 0.2s ease;
