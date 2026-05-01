@@ -279,7 +279,7 @@ const metodo = [
 function Metodo() {
   return (
     <section id="metodo" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchBars} alt="" aria-hidden className="sketch sketch-dark absolute top-8 right-4 w-96 hidden md:block" width={768} height={768} />
+      <img src={sketchLine} alt="" aria-hidden className="sketch sketch-dark absolute top-8 right-4 w-96 hidden md:block" width={768} height={768} />
       <img src={sketchChart} alt="" aria-hidden className="sketch sketch-dark absolute -bottom-6 -left-8 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <div className="max-w-3xl reveal">
