@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import patriziaImg from "@/assets/patrizia.jpg";
+import patriziaImg2 from "@/assets/patrizia-2.jpg";
 import sketchBank from "@/assets/sketch-bank.png";
 import sketchLeaf from "@/assets/sketch-leaf.png";
 import sketchScale from "@/assets/sketch-scale.png";
 import sketchFactory from "@/assets/sketch-factory.png";
-import sketchBook from "@/assets/sketch-book.png";
 import sketchChart from "@/assets/sketch-chart.png";
+import sketchPie from "@/assets/sketch-pie.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,6 +69,7 @@ function Nav() {
     { href: "#servizi", label: "Servizi" },
     { href: "#normativa", label: "Normativa" },
     { href: "#chi-sono", label: "Chi sono" },
+    { href: "#greenletter", label: "Greenletter" },
     { href: "#contatti", label: "Contatti" },
   ];
   return (
@@ -108,15 +110,15 @@ function Stat({ value, label }: { value: string; label: string }) {
 function Hero() {
   return (
     <section id="hero" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 radial-teal overflow-hidden">
-      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-dark absolute -top-10 -left-16 w-72 rotate-[-15deg] hidden md:block" width={768} height={768} />
-      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-dark absolute bottom-8 right-4 w-40 hidden lg:block" width={768} height={768} />
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-dark absolute -top-16 -left-24 w-[28rem] rotate-[-15deg] hidden md:block" width={768} height={768} />
+      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-dark absolute -bottom-8 right-2 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-12 lg:gap-16 items-center relative">
         <div className="lg:col-span-3 reveal">
           <div className="label-mono label-mono-teal flex items-center gap-2">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal" /> CONSULENZA ESG PER PMI
           </div>
           <h1 className="mt-6 font-display font-black text-cream text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
-            Misurare la sostenibilità è l'unico modo per <em className="italic text-teal">dimostrarla</em>.
+            <span className="highlight-mark dark-bg">Misurare</span> la sostenibilità è l'unico modo per <em className="italic text-teal">dimostrarla</em>.
           </h1>
           <p className="mt-8 text-cream/80 max-w-2xl text-lg leading-relaxed">
             Patrizia Parca, data analyst specializzata in ESG e sostenibilità aziendale. Aiuto le PMI a costruire sistemi di misurazione reali: indicatori verificabili, dashboard leggibili, reporting conformi a CSRD e D.Lgs. 30/2026. Senza piattaforme da acquistare. Solo analisi, dati e metodo.
@@ -154,12 +156,13 @@ const services = [
 function Servizi() {
   return (
     <section id="servizi" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-10 right-6 w-48 rotate-12 hidden md:block" width={768} height={768} />
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-10 right-0 w-[26rem] rotate-12 hidden md:block" width={768} height={768} />
+      <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute bottom-10 -left-10 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <div className="max-w-3xl reveal">
           <div className="label-mono label-mono-teal">● 01 / Servizi</div>
           <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl lg:text-5xl">
-            Consulenza ESG su misura per la tua <em className="italic">PMI</em>
+            Consulenza ESG <span className="highlight-mark">su misura</span> per la tua <em className="italic">PMI</em>
           </h2>
           <p className="mt-6 text-ink/75 text-lg">
             Lavoro su sei aree, sempre con dati alla base. Nessun report parte dalla struttura narrativa: parte dalla raccolta e dalla verifica dei dati.
@@ -203,14 +206,14 @@ const norma = [
 function Normativa() {
   return (
     <section id="normativa" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchBank} alt="" aria-hidden className="sketch sketch-dark absolute top-16 right-4 w-72 hidden lg:block" width={768} height={768} />
-      <img src={sketchFactory} alt="" aria-hidden className="sketch sketch-dark absolute bottom-10 left-2 w-56 hidden lg:block" width={768} height={768} />
+      <img src={sketchBank} alt="" aria-hidden className="sketch sketch-dark absolute top-12 right-0 w-[28rem] hidden lg:block" width={768} height={768} />
+      <img src={sketchFactory} alt="" aria-hidden className="sketch sketch-dark absolute bottom-4 -left-6 w-96 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 relative">
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28 reveal">
             <div className="label-mono label-mono-teal">● 02 / Normativa</div>
             <h2 className="mt-5 font-display font-black text-cream text-3xl sm:text-4xl lg:text-5xl">
-              Cosa cambia per le PMI italiane tra il <em className="italic text-teal">2026 e il 2030</em>
+              Cosa <span className="highlight-mark dark-bg">cambia</span> per le PMI italiane tra il <em className="italic text-teal">2026 e il 2030</em>
             </h2>
           </div>
         </div>
@@ -231,12 +234,13 @@ function Normativa() {
 function ChiSono() {
   return (
     <section id="chi-sono" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchBook} alt="" aria-hidden className="sketch sketch-light absolute top-12 right-10 w-44 -rotate-6 hidden md:block" width={768} height={768} />
+      <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute top-8 right-4 w-[22rem] -rotate-6 hidden md:block" width={768} height={768} />
+      <img src={sketchScale} alt="" aria-hidden className="sketch sketch-light absolute -bottom-8 -left-10 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-start relative">
         <div className="lg:col-span-3 reveal">
           <div className="label-mono label-mono-teal">● 03 / Chi sono</div>
           <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl lg:text-5xl">
-            Patrizia Parca, data analyst e <em className="italic">consulente ESG</em>.
+            Patrizia Parca, <span className="highlight-mark">data analyst</span> e <em className="italic">consulente ESG</em>.
           </h2>
           <div className="mt-8 space-y-6 text-lg leading-relaxed" style={{ color: "rgba(11,20,16,0.8)" }}>
             <p>Lavoro sulla sostenibilità aziendale come analista: parto dai dati, costruisco gli indicatori, leggo i numeri prima di scrivere qualsiasi cosa.</p>
@@ -252,12 +256,11 @@ function ChiSono() {
         <div className="lg:col-span-2 reveal">
           <div className="relative">
             <div className="absolute -inset-2" style={{ border: "1px solid rgba(31,107,90,0.35)" }} />
-            <img src={patriziaImg} alt="Ritratto di Patrizia Parca, fondatrice di sì sustainability intelligence" loading="lazy" width={1024} height={1024} className="relative w-full aspect-square object-cover" />
+            <img src={patriziaImg2} alt="Patrizia Parca al lavoro davanti a una lavagna con grafici di crescita, innovazione e sostenibilità" loading="lazy" width={1024} height={1024} className="relative w-full aspect-square object-cover" />
           </div>
           <div className="mt-5 font-mono text-[0.65rem] uppercase tracking-[0.2em] space-y-1">
             <div style={{ color: "var(--ink)" }}>Patrizia Parca</div>
             <div style={{ color: "rgba(11,20,16,0.55)" }}>Data analyst · ESG reporting</div>
-            <div style={{ color: "rgba(11,20,16,0.55)" }}>Roma, Italia</div>
           </div>
         </div>
       </div>
@@ -274,12 +277,13 @@ const metodo = [
 function Metodo() {
   return (
     <section id="metodo" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchScale} alt="" aria-hidden className="sketch sketch-dark absolute top-10 right-8 w-56 hidden md:block" width={768} height={768} />
+      <img src={sketchScale} alt="" aria-hidden className="sketch sketch-dark absolute top-8 right-4 w-96 hidden md:block" width={768} height={768} />
+      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-dark absolute -bottom-6 -left-8 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <div className="max-w-3xl reveal">
           <div className="label-mono label-mono-teal">● 04 / Metodo</div>
           <h2 className="mt-5 font-display font-black text-cream text-3xl sm:text-4xl lg:text-5xl">
-            I dati vengono prima delle <em className="italic text-teal">parole</em>.
+            I <span className="highlight-mark dark-bg">dati</span> vengono prima delle <em className="italic text-teal">parole</em>.
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-px bg-border-soft border border-border-soft">
@@ -299,14 +303,14 @@ function Metodo() {
 function Contatti() {
   return (
     <section id="contatti" className="section-light py-32 lg:py-40 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-light absolute bottom-6 left-6 w-40 -rotate-3 hidden md:block" width={768} height={768} />
-      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-10 right-10 w-44 rotate-12 hidden md:block" width={768} height={768} />
+      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-light absolute bottom-0 -left-10 w-[26rem] -rotate-3 hidden md:block" width={768} height={768} />
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-4 -right-8 w-[28rem] rotate-12 hidden md:block" width={768} height={768} />
       <div className="max-w-3xl mx-auto px-6 text-center reveal relative">
         <div className="label-mono label-mono-teal flex items-center justify-center gap-2">
           <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: "var(--teal-deep)" }} /> PARLIAMONE
         </div>
         <h2 className="mt-6 font-display font-black text-4xl sm:text-5xl lg:text-6xl">
-          Le lamentele non compaiono nei bilanci. <em className="italic"><span className="highlight-mark">I ritardi sì.</span></em>
+          La sostenibilità è un <span className="highlight-mark">vantaggio</span> competitivo.
         </h2>
         <p className="mt-8 text-lg leading-relaxed" style={{ color: "rgba(11,20,16,0.75)" }}>
           Se vuoi costruire un reporting ESG serio, con dati verificabili, indicatori che reggono nel tempo e un adeguamento normativo reale, scrivimi. Nessun preventivo standard: ogni PMI ha una situazione diversa.
@@ -317,7 +321,6 @@ function Contatti() {
           </a>
           <div className="font-mono text-xs uppercase tracking-[0.18em] space-y-1" style={{ color: "rgba(11,20,16,0.55)" }}>
             <div>info@sustainabilityintelligence.it</div>
-            <div>Roma, Italia — disponibile anche da remoto</div>
           </div>
         </div>
       </div>
@@ -333,17 +336,22 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-5 text-muted text-sm max-w-md leading-relaxed">
-              Consulente ESG e reporting di sostenibilità per PMI italiane. Adeguamento CSRD, D.Lgs. 30/2026, KPI ESG, dashboard e analisi di materialità. Roma, Italia.
+              Consulente ESG e reporting di sostenibilità per PMI italiane. Adeguamento CSRD, D.Lgs. 30/2026, KPI ESG, dashboard e analisi di materialità.
             </p>
+            <div className="mt-6 flex gap-4">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors border border-border-soft px-3 py-2">Instagram</a>
+              <a href="https://www.linkedin.com/in/patriziaparca/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors border border-border-soft px-3 py-2">LinkedIn</a>
+              <a href="#greenletter" aria-label="Greenletter" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors border border-border-soft px-3 py-2">Greenletter</a>
+            </div>
           </div>
           <nav aria-label="Footer" className="flex flex-wrap gap-6">
-            {["Servizi", "Normativa", "Chi sono", "Metodo", "Contatti"].map((l) => (
+            {["Servizi", "Normativa", "Chi sono", "Metodo", "Greenletter", "Contatti"].map((l) => (
               <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">{l}</a>
             ))}
           </nav>
           <div className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted space-y-1 text-right">
             <div>Patrizia Parca · Data Analyst · ESG Reporting</div>
-            <div>P.IVA [da inserire] · info@sustainabilityintelligence.it</div>
+            <div>P.IVA 14729701004 · info@sustainabilityintelligence.it</div>
             <div>© 2026 sì sustainability intelligence</div>
           </div>
         </div>
@@ -382,6 +390,7 @@ function Index() {
         <Normativa />
         <ChiSono />
         <Metodo />
+        <Greenletter />
         <Contatti />
       </main>
       <Footer />
