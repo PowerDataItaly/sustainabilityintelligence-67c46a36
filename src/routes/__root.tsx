@@ -32,6 +32,14 @@ export const Route = createRootRoute({
       { title: "sì — sustainability intelligence" },
       { name: "author", content: "Patrizia Parca" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "sì — sustainability intelligence" },
+      { name: "twitter:title", content: "sì — sustainability intelligence" },
+      { name: "description", content: "Analisi dati applicata alla sostenibilità aziendale" },
+      { property: "og:description", content: "Analisi dati applicata alla sostenibilità aziendale" },
+      { name: "twitter:description", content: "Analisi dati applicata alla sostenibilità aziendale" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/2fd5abcf-d141-4cab-8e40-9522a0af26e9" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/2fd5abcf-d141-4cab-8e40-9522a0af26e9" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       {
