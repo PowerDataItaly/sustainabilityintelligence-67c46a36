@@ -9,7 +9,7 @@ import sketchChart from "@/assets/sketch-chart.png";
 import sketchPie from "@/assets/sketch-pie.png";
 import sketchLine from "@/assets/sketch-line.png";
 import sketchData from "@/assets/sketch-data.png";
-import sketchBars from "@/assets/sketch-bars.png";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -237,7 +237,6 @@ function ChiSono() {
   return (
     <section id="chi-sono" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
       <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute top-8 right-4 w-[22rem] -rotate-6 hidden md:block" width={768} height={768} />
-      <img src={sketchBars} alt="" aria-hidden className="sketch sketch-light absolute -bottom-8 -left-10 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-start relative">
         <div className="lg:col-span-3 reveal">
           <div className="label-mono label-mono-teal">● 03 / Chi sono</div>
@@ -304,7 +303,7 @@ function Metodo() {
 
 function Greenletter() {
   return (
-    <section id="greenletter" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
+    <section id="greenletter" className="greenletter-bg py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
       <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute -top-10 -left-10 w-80 rotate-[-12deg] hidden md:block" width={768} height={768} />
       <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute bottom-0 right-0 w-72 hidden md:block" width={768} height={768} />
       <div className="max-w-3xl mx-auto px-6 text-center reveal relative">
@@ -322,6 +321,9 @@ function Greenletter() {
             Iscriviti su Substack
           </a>
         </div>
+        <p className="mt-6 text-xs leading-relaxed max-w-xl mx-auto" style={{ color: "rgba(11,20,16,0.6)" }}>
+          Iscrivendoti acconsenti al trattamento dei tuoi dati personali (indirizzo email) ai soli fini dell'invio della greenletter, ai sensi del Reg. UE 2016/679 (GDPR). Puoi cancellarti in qualsiasi momento. Maggiori informazioni nell'<Link to="/privacy" className="underline">informativa privacy</Link>.
+        </p>
       </div>
     </section>
   );
@@ -375,6 +377,7 @@ function Footer() {
             {["Servizi", "Normativa", "Chi sono", "Metodo", "Greenletter", "Contatti"].map((l) => (
               <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">{l}</a>
             ))}
+            <Link to="/privacy" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">Privacy</Link>
           </nav>
           <div className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted space-y-1 text-right">
             <div>Patrizia Parca · Data Analyst · ESG Reporting</div>
