@@ -237,7 +237,6 @@ function ChiSono() {
   return (
     <section id="chi-sono" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
       <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute top-8 right-4 w-[22rem] -rotate-6 hidden md:block" width={768} height={768} />
-      <img src={sketchBars} alt="" aria-hidden className="sketch sketch-light absolute -bottom-8 -left-10 w-80 hidden lg:block" width={768} height={768} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-start relative">
         <div className="lg:col-span-3 reveal">
           <div className="label-mono label-mono-teal">● 03 / Chi sono</div>
@@ -304,7 +303,7 @@ function Metodo() {
 
 function Greenletter() {
   return (
-    <section id="greenletter" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
+    <section id="greenletter" className="greenletter-bg py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
       <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute -top-10 -left-10 w-80 rotate-[-12deg] hidden md:block" width={768} height={768} />
       <img src={sketchPie} alt="" aria-hidden className="sketch sketch-light absolute bottom-0 right-0 w-72 hidden md:block" width={768} height={768} />
       <div className="max-w-3xl mx-auto px-6 text-center reveal relative">
