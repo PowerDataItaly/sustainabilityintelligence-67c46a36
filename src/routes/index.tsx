@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import patriziaImg from "@/assets/patrizia.jpg";
+import sketchBank from "@/assets/sketch-bank.png";
+import sketchLeaf from "@/assets/sketch-leaf.png";
+import sketchScale from "@/assets/sketch-scale.png";
+import sketchFactory from "@/assets/sketch-factory.png";
+import sketchBook from "@/assets/sketch-book.png";
+import sketchChart from "@/assets/sketch-chart.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -101,8 +107,10 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function Hero() {
   return (
-    <section id="hero" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 radial-teal">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+    <section id="hero" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 radial-teal overflow-hidden">
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-dark absolute -top-10 -left-16 w-72 rotate-[-15deg] hidden md:block" width={768} height={768} />
+      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-dark absolute bottom-8 right-4 w-40 hidden lg:block" width={768} height={768} />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-12 lg:gap-16 items-center relative">
         <div className="lg:col-span-3 reveal">
           <div className="label-mono label-mono-teal flex items-center gap-2">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal" /> CONSULENZA ESG PER PMI
@@ -145,26 +153,27 @@ const services = [
 
 function Servizi() {
   return (
-    <section id="servizi" className="py-24 lg:py-32 border-t border-border-soft">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="servizi" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-10 right-6 w-48 rotate-12 hidden md:block" width={768} height={768} />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <div className="max-w-3xl reveal">
           <div className="label-mono label-mono-teal">● 01 / Servizi</div>
-          <h2 className="mt-5 font-display font-black text-cream text-3xl sm:text-4xl lg:text-5xl">
-            Consulenza ESG su misura per la tua <em className="italic text-teal">PMI</em>
+          <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl lg:text-5xl">
+            Consulenza ESG su misura per la tua <em className="italic">PMI</em>
           </h2>
-          <p className="mt-6 text-cream/75 text-lg">
+          <p className="mt-6 text-ink/75 text-lg">
             Lavoro su sei aree, sempre con dati alla base. Nessun report parte dalla struttura narrativa: parte dalla raccolta e dalla verifica dei dati.
           </p>
         </div>
-        <div className="mt-16 grid md:grid-cols-2 gap-px bg-border-soft border border-border-soft">
+        <div className="mt-16 grid md:grid-cols-2 gap-px" style={{ background: "rgba(11,20,16,0.12)", border: "1px solid rgba(11,20,16,0.12)" }}>
           {services.map((s, i) => (
-            <article key={s.n} className="card-corner bg-bg p-8 lg:p-10 reveal" style={{ transitionDelay: `${i * 60}ms` }}>
+            <article key={s.n} className="card-corner p-8 lg:p-10 reveal" style={{ transitionDelay: `${i * 60}ms`, background: "var(--light-bg)" }}>
               <div className="flex items-start justify-between gap-6">
-                <div className="font-mono text-teal text-xs tracking-[0.2em]">{s.n}</div>
-                <div className="font-mono text-muted text-[0.6rem] tracking-[0.2em] uppercase">Service</div>
+                <div className="font-mono text-xs tracking-[0.2em]" style={{ color: "var(--teal-deep)" }}>{s.n}</div>
+                <div className="font-mono text-[0.6rem] tracking-[0.2em] uppercase" style={{ color: "rgba(11,20,16,0.5)" }}>Service</div>
               </div>
-              <h3 className="mt-6 font-display text-cream text-2xl lg:text-[1.7rem] leading-tight">{s.h}</h3>
-              <p className="mt-5 text-cream/70 leading-relaxed">{s.p}</p>
+              <h3 className="mt-6 font-display text-2xl lg:text-[1.7rem] leading-tight">{s.h}</h3>
+              <p className="mt-5 leading-relaxed" style={{ color: "rgba(11,20,16,0.7)" }}>{s.p}</p>
             </article>
           ))}
         </div>
@@ -193,8 +202,10 @@ const norma = [
 
 function Normativa() {
   return (
-    <section id="normativa" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
+    <section id="normativa" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft relative overflow-hidden">
+      <img src={sketchBank} alt="" aria-hidden className="sketch sketch-dark absolute top-16 right-4 w-72 hidden lg:block" width={768} height={768} />
+      <img src={sketchFactory} alt="" aria-hidden className="sketch sketch-dark absolute bottom-10 left-2 w-56 hidden lg:block" width={768} height={768} />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 relative">
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28 reveal">
             <div className="label-mono label-mono-teal">● 02 / Normativa</div>
@@ -219,30 +230,34 @@ function Normativa() {
 
 function ChiSono() {
   return (
-    <section id="chi-sono" className="py-24 lg:py-32 border-t border-border-soft radial-teal">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-start">
+    <section id="chi-sono" className="section-light py-24 lg:py-32 border-t border-border-soft relative overflow-hidden">
+      <img src={sketchBook} alt="" aria-hidden className="sketch sketch-light absolute top-12 right-10 w-44 -rotate-6 hidden md:block" width={768} height={768} />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-start relative">
         <div className="lg:col-span-3 reveal">
           <div className="label-mono label-mono-teal">● 03 / Chi sono</div>
-          <h2 className="mt-5 font-display font-black text-cream text-3xl sm:text-4xl lg:text-5xl">
-            Patrizia Parca, data analyst e <em className="italic text-teal">consulente ESG</em>.
+          <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl lg:text-5xl">
+            Patrizia Parca, data analyst e <em className="italic">consulente ESG</em>.
           </h2>
-          <div className="mt-8 space-y-6 text-cream/80 text-lg leading-relaxed">
+          <div className="mt-8 space-y-6 text-lg leading-relaxed" style={{ color: "rgba(11,20,16,0.8)" }}>
             <p>Lavoro sulla sostenibilità aziendale come analista: parto dai dati, costruisco gli indicatori, leggo i numeri prima di scrivere qualsiasi cosa.</p>
             <p>Prima di specializzarmi in ESG ho lavorato per quindici anni nel marketing e nella brand identity per PMI italiane. Quella formazione mi ha insegnato una cosa: la comunicazione regge solo se c'è sostanza sotto. Nella sostenibilità, quella sostanza sono i dati.</p>
             <p>Ho un percorso in economia, una specializzazione in data analysis e una pratica quotidiana su reporting ESG, normativa europea e analisi quantitativa applicata alla sostenibilità d'impresa. Sono la fondatrice di sì sustainability intelligence e l'autrice di Dati di Fatto, una guida all'analisi dei dati per le PMI.</p>
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
             {["[ESG REPORTING]", "[DATA ANALYSIS]", "[CSRD · D.LGS. 30/2026]"].map((t) => (
-              <span key={t} className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-teal border border-teal/40 px-3 py-2">{t}</span>
+              <span key={t} className="font-mono text-[0.65rem] uppercase tracking-[0.18em] px-3 py-2" style={{ color: "var(--teal-deep)", border: "1px solid rgba(31,107,90,0.4)" }}>{t}</span>
             ))}
           </div>
         </div>
         <div className="lg:col-span-2 reveal">
-          <img src={patriziaImg} alt="Ritratto di Patrizia Parca, fondatrice di sì sustainability intelligence" loading="lazy" width={1024} height={1024} className="w-full aspect-square object-cover" />
+          <div className="relative">
+            <div className="absolute -inset-2" style={{ border: "1px solid rgba(31,107,90,0.35)" }} />
+            <img src={patriziaImg} alt="Ritratto di Patrizia Parca, fondatrice di sì sustainability intelligence" loading="lazy" width={1024} height={1024} className="relative w-full aspect-square object-cover" />
+          </div>
           <div className="mt-5 font-mono text-[0.65rem] uppercase tracking-[0.2em] space-y-1">
-            <div className="text-cream">Patrizia Parca</div>
-            <div className="text-muted">Data analyst · ESG reporting</div>
-            <div className="text-muted">Roma, Italia</div>
+            <div style={{ color: "var(--ink)" }}>Patrizia Parca</div>
+            <div style={{ color: "rgba(11,20,16,0.55)" }}>Data analyst · ESG reporting</div>
+            <div style={{ color: "rgba(11,20,16,0.55)" }}>Roma, Italia</div>
           </div>
         </div>
       </div>
@@ -258,8 +273,9 @@ const metodo = [
 
 function Metodo() {
   return (
-    <section id="metodo" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="metodo" className="py-24 lg:py-32 bg-bg2 border-t border-border-soft relative overflow-hidden">
+      <img src={sketchScale} alt="" aria-hidden className="sketch sketch-dark absolute top-10 right-8 w-56 hidden md:block" width={768} height={768} />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <div className="max-w-3xl reveal">
           <div className="label-mono label-mono-teal">● 04 / Metodo</div>
           <h2 className="mt-5 font-display font-black text-cream text-3xl sm:text-4xl lg:text-5xl">
@@ -282,22 +298,24 @@ function Metodo() {
 
 function Contatti() {
   return (
-    <section id="contatti" className="py-32 lg:py-40 border-t border-border-soft radial-teal">
-      <div className="max-w-3xl mx-auto px-6 text-center reveal">
+    <section id="contatti" className="section-light py-32 lg:py-40 border-t border-border-soft relative overflow-hidden">
+      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-light absolute bottom-6 left-6 w-40 -rotate-3 hidden md:block" width={768} height={768} />
+      <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-10 right-10 w-44 rotate-12 hidden md:block" width={768} height={768} />
+      <div className="max-w-3xl mx-auto px-6 text-center reveal relative">
         <div className="label-mono label-mono-teal flex items-center justify-center gap-2">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal" /> PARLIAMONE
+          <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: "var(--teal-deep)" }} /> PARLIAMONE
         </div>
-        <h2 className="mt-6 font-display font-black text-cream text-4xl sm:text-5xl lg:text-6xl">
-          Le lamentele non compaiono nei bilanci. <em className="italic text-teal">I ritardi sì.</em>
+        <h2 className="mt-6 font-display font-black text-4xl sm:text-5xl lg:text-6xl">
+          Le lamentele non compaiono nei bilanci. <em className="italic"><span className="highlight-mark">I ritardi sì.</span></em>
         </h2>
-        <p className="mt-8 text-cream/75 text-lg leading-relaxed">
+        <p className="mt-8 text-lg leading-relaxed" style={{ color: "rgba(11,20,16,0.75)" }}>
           Se vuoi costruire un reporting ESG serio, con dati verificabili, indicatori che reggono nel tempo e un adeguamento normativo reale, scrivimi. Nessun preventivo standard: ogni PMI ha una situazione diversa.
         </p>
         <div className="mt-12 flex flex-col items-center gap-6">
-          <a href="mailto:info@sustainabilityintelligence.it" className="inline-block font-mono uppercase text-xs tracking-[0.2em] bg-teal text-bg px-8 py-4 hover:bg-cream transition-colors">
+          <a href="mailto:info@sustainabilityintelligence.it" className="inline-block font-mono uppercase text-xs tracking-[0.2em] px-8 py-4 transition-colors" style={{ background: "var(--ink)", color: "var(--light-bg)" }}>
             Scrivimi
           </a>
-          <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted space-y-1">
+          <div className="font-mono text-xs uppercase tracking-[0.18em] space-y-1" style={{ color: "rgba(11,20,16,0.55)" }}>
             <div>info@sustainabilityintelligence.it</div>
             <div>Roma, Italia — disponibile anche da remoto</div>
           </div>
