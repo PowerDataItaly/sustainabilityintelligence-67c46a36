@@ -330,7 +330,7 @@ function Greenletter() {
 function Contatti() {
   return (
     <section id="contatti" className="section-light py-32 lg:py-40 border-t border-border-soft relative overflow-hidden">
-      <img src={sketchChart} alt="" aria-hidden className="sketch sketch-light absolute bottom-0 -left-10 w-[26rem] -rotate-3 hidden md:block" width={768} height={768} />
+      <img src={sketchData} alt="" aria-hidden className="sketch sketch-light absolute bottom-0 -left-10 w-[26rem] -rotate-3 hidden md:block" width={768} height={768} />
       <img src={sketchLeaf} alt="" aria-hidden className="sketch sketch-light absolute top-4 -right-8 w-[28rem] rotate-12 hidden md:block" width={768} height={768} />
       <div className="max-w-3xl mx-auto px-6 text-center reveal relative">
         <div className="label-mono label-mono-teal flex items-center justify-center gap-2">
