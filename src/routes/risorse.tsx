@@ -99,22 +99,24 @@ function RisorsePage() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
-        <div className="label-mono label-mono-teal">● RISORSE</div>
-        <h1 className="mt-5 font-display font-black text-4xl sm:text-5xl lg:text-6xl">
-          Strumenti, normative e <em className="italic text-teal">letture</em> sulla sostenibilità.
-        </h1>
-        <p className="mt-8 max-w-2xl text-cream/80 text-lg leading-relaxed">
-          Una raccolta ragionata di riferimenti utili per orientarsi nella sostenibilità d'impresa: testi normativi, standard di rendicontazione, guide pratiche e fonti dati. Aggiornata periodicamente.
-        </p>
+      <main>
+        <div className="max-w-5xl mx-auto px-6 lg:px-10 pt-20 lg:pt-28">
+          <div className="label-mono label-mono-teal">● RISORSE</div>
+          <h1 className="mt-5 font-display font-black text-4xl sm:text-5xl lg:text-6xl">
+            Strumenti, normative e <em className="italic text-teal">letture</em> sulla sostenibilità.
+          </h1>
+          <p className="mt-8 max-w-2xl text-cream/80 text-lg leading-relaxed">
+            Una raccolta ragionata di riferimenti utili per orientarsi nella sostenibilità d'impresa: testi normativi, standard di rendicontazione, guide pratiche e fonti dati. Aggiornata periodicamente.
+          </p>
+        </div>
 
-        <section className="mt-20 py-16 -mx-6 lg:-mx-10 px-6 lg:px-10" style={{ backgroundColor: "#ffffff", color: "#1a2e1a" }}>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section className="mt-20 py-16 lg:py-24 px-6 lg:px-10" style={{ backgroundColor: "#ffffff", color: "#1a2e1a" }}>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center md:justify-start">
               <img
                 src={libroCover}
                 alt="Copertina del libro 'La sostenibilità è un dato di fatto' di Patrizia Parca"
-                className="w-full max-w-sm shadow-2xl"
+                className="w-full max-w-md"
               />
             </div>
             <div>
@@ -141,7 +143,8 @@ function RisorsePage() {
           </div>
         </section>
 
-        <div className="mt-16 space-y-16">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10 pb-20 lg:pb-28">
+        <div className="mt-20 space-y-16">
           {categories.map((cat) => (
             <section key={cat}>
               <h2 className="font-mono uppercase text-[0.7rem] tracking-[0.2em] text-teal border-b border-border-soft pb-3">
@@ -180,6 +183,7 @@ function RisorsePage() {
             </Link>
             .
           </p>
+        </div>
         </div>
       </main>
 
