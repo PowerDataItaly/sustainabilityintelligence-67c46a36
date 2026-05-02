@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import libroCover from "@/assets/libro-patrizia.png";
 
 export const Route = createFileRoute("/risorse")({
   head: () => ({
@@ -106,6 +107,38 @@ function RisorsePage() {
         <p className="mt-8 max-w-2xl text-cream/80 text-lg leading-relaxed">
           Una raccolta ragionata di riferimenti utili per orientarsi nella sostenibilità d'impresa: testi normativi, standard di rendicontazione, guide pratiche e fonti dati. Aggiornata periodicamente.
         </p>
+
+        <section className="mt-20 border-t border-border-soft pt-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center md:justify-start">
+              <img
+                src={libroCover}
+                alt="Copertina del libro 'La sostenibilità è un dato di fatto' di Patrizia Parca"
+                className="w-full max-w-sm shadow-2xl"
+              />
+            </div>
+            <div>
+              <div className="label-mono label-mono-teal">● IL LIBRO</div>
+              <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl">
+                La sostenibilità è <em className="italic text-teal">«un dato di fatto»</em>
+              </h2>
+              <p className="mt-6 text-cream/80 leading-relaxed">
+                Il mio libro su perché la sostenibilità d'impresa non è più un'opzione, ma un dato di fatto. Un percorso pratico tra normativa, dati e metodo per chi guida una PMI e vuole trasformare gli obblighi ESG in vantaggio competitivo.
+              </p>
+              <p className="mt-4 text-cream/70 leading-relaxed text-sm">
+                Di Patrizia Parca.
+              </p>
+              <a
+                href="https://www.amazon.it/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 bg-teal text-bg px-6 py-3 font-mono uppercase text-xs tracking-[0.18em] hover:bg-cream transition-colors"
+              >
+                Acquista su Amazon →
+              </a>
+            </div>
+          </div>
+        </section>
 
         <div className="mt-16 space-y-16">
           {categories.map((cat) => (
