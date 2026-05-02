@@ -110,21 +110,21 @@ function RisorsePage() {
           </p>
         </div>
 
-        <section className="mt-20 py-16 lg:py-24 px-6 lg:px-10" style={{ backgroundColor: "#ffffff", color: "#1a2e1a" }}>
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section className="mt-20 py-24 lg:py-32 px-6 lg:px-10" style={{ backgroundColor: "#ffffff", color: "#1a2e1a" }}>
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center md:justify-start">
               <img
                 src={libroCover}
                 alt="Copertina del libro 'La sostenibilità è un dato di fatto' di Patrizia Parca"
-                className="w-full max-w-md"
+                className="w-full max-w-2xl"
               />
             </div>
             <div>
               <div className="font-mono uppercase text-[0.7rem] tracking-[0.2em]" style={{ color: "#1a4d2e" }}>● IL LIBRO</div>
-              <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl" style={{ color: "#0f1410" }}>
+              <h2 className="mt-5 font-display font-black text-4xl sm:text-5xl lg:text-6xl" style={{ color: "#0f1410" }}>
                 La sostenibilità è <em className="italic" style={{ color: "#1a4d2e" }}>«un dato di fatto»</em>
               </h2>
-              <p className="mt-6 leading-relaxed" style={{ color: "#2a2a2a" }}>
+              <p className="mt-6 leading-relaxed text-lg" style={{ color: "#2a2a2a" }}>
                 Il mio libro su perché la sostenibilità d'impresa non è più un'opzione, ma un dato di fatto. Un percorso pratico tra normativa, dati e metodo per chi guida una PMI e vuole trasformare gli obblighi ESG in vantaggio competitivo.
               </p>
               <p className="mt-4 leading-relaxed text-sm" style={{ color: "#5a5a5a" }}>
