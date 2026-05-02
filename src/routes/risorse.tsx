@@ -51,7 +51,7 @@ const resources: Resource[] = [
     category: "Standard",
     title: "VSME — Standard volontario per PMI",
     description: "Lo standard semplificato pensato per le piccole e medie imprese non quotate. Punto di partenza pragmatico per il reporting ESG.",
-    href: "https://www.efrag.org/News/Public-490/EFRAG-publishes-the-final-Voluntary-SME-Standard",
+    href: "https://xbrl.efrag.org/downloads/efrag-sustainability-report-2025/EFRAG_2025_XBRL_Report_viewer.html",
     type: "Standard volontario",
   },
   {
