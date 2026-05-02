@@ -108,8 +108,8 @@ function RisorsePage() {
           Una raccolta ragionata di riferimenti utili per orientarsi nella sostenibilità d'impresa: testi normativi, standard di rendicontazione, guide pratiche e fonti dati. Aggiornata periodicamente.
         </p>
 
-        <section className="mt-20 px-6 sm:px-10 py-16 -mx-6 lg:-mx-10" style={{ backgroundColor: "#dde6d3", color: "#1a2e1a" }}>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <section className="mt-20 py-16 -mx-6 lg:-mx-10 px-6 lg:px-10" style={{ backgroundColor: "#ffffff", color: "#1a2e1a" }}>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center md:justify-start">
               <img
                 src={libroCover}
@@ -119,13 +119,13 @@ function RisorsePage() {
             </div>
             <div>
               <div className="font-mono uppercase text-[0.7rem] tracking-[0.2em]" style={{ color: "#1a4d2e" }}>● IL LIBRO</div>
-              <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl" style={{ color: "#0f2818" }}>
+              <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl" style={{ color: "#0f1410" }}>
                 La sostenibilità è <em className="italic" style={{ color: "#1a4d2e" }}>«un dato di fatto»</em>
               </h2>
-              <p className="mt-6 leading-relaxed" style={{ color: "#1a2e1a" }}>
+              <p className="mt-6 leading-relaxed" style={{ color: "#2a2a2a" }}>
                 Il mio libro su perché la sostenibilità d'impresa non è più un'opzione, ma un dato di fatto. Un percorso pratico tra normativa, dati e metodo per chi guida una PMI e vuole trasformare gli obblighi ESG in vantaggio competitivo.
               </p>
-              <p className="mt-4 leading-relaxed text-sm" style={{ color: "#3d4f3d" }}>
+              <p className="mt-4 leading-relaxed text-sm" style={{ color: "#5a5a5a" }}>
                 Di Patrizia Parca.
               </p>
               <a
@@ -133,7 +133,7 @@ function RisorsePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 px-6 py-3 font-mono uppercase text-xs tracking-[0.18em] transition-colors hover:opacity-90"
-                style={{ backgroundColor: "#0f2818", color: "#dde6d3" }}
+                style={{ backgroundColor: "#0f1410", color: "#ffffff" }}
               >
                 Acquista su Amazon →
               </a>
