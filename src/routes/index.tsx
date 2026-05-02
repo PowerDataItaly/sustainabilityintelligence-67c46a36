@@ -82,6 +82,7 @@ function Nav() {
           {links.map((l) => (
             <a key={l.href} href={l.href} className="font-mono uppercase text-[0.65rem] tracking-[0.18em] text-cream/80 hover:text-teal transition-colors">{l.label}</a>
           ))}
+          <Link to="/risorse" className="font-mono uppercase text-[0.65rem] tracking-[0.18em] text-cream/80 hover:text-teal transition-colors">Risorse</Link>
           <a href="#contatti" className="font-mono uppercase text-[0.65rem] tracking-[0.18em] border border-teal text-teal px-4 py-2 hover:bg-teal hover:text-bg transition-colors">Parliamone</a>
         </nav>
         <button className="md:hidden text-cream font-mono text-xs uppercase tracking-widest" onClick={() => setOpen((v) => !v)} aria-label="Apri menu">
@@ -93,6 +94,7 @@ function Nav() {
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="font-mono uppercase text-xs tracking-[0.18em] text-cream/80">{l.label}</a>
           ))}
+          <Link to="/risorse" onClick={() => setOpen(false)} className="font-mono uppercase text-xs tracking-[0.18em] text-cream/80">Risorse</Link>
           <a href="#contatti" onClick={() => setOpen(false)} className="font-mono uppercase text-xs tracking-[0.18em] border border-teal text-teal px-4 py-3 inline-block w-fit">Parliamone</a>
         </div>
       )}
@@ -378,6 +380,7 @@ function Footer() {
               <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">{l}</a>
             ))}
             <Link to="/privacy" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">Privacy</Link>
+            <Link to="/risorse" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-cream/70 hover:text-teal transition-colors">Risorse</Link>
           </nav>
           <div className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted space-y-1 text-right">
             <div>Patrizia Parca · Data Analyst · ESG Reporting</div>
