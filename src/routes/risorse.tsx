@@ -108,7 +108,7 @@ function RisorsePage() {
           Una raccolta ragionata di riferimenti utili per orientarsi nella sostenibilità d'impresa: testi normativi, standard di rendicontazione, guide pratiche e fonti dati. Aggiornata periodicamente.
         </p>
 
-        <section className="mt-20 border-t border-border-soft pt-16">
+        <section className="mt-20 px-6 sm:px-10 py-16 -mx-6 lg:-mx-10" style={{ backgroundColor: "#dde6d3", color: "#1a2e1a" }}>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center md:justify-start">
               <img
@@ -118,21 +118,22 @@ function RisorsePage() {
               />
             </div>
             <div>
-              <div className="label-mono label-mono-teal">● IL LIBRO</div>
-              <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl">
-                La sostenibilità è <em className="italic text-teal">«un dato di fatto»</em>
+              <div className="font-mono uppercase text-[0.7rem] tracking-[0.2em]" style={{ color: "#1a4d2e" }}>● IL LIBRO</div>
+              <h2 className="mt-5 font-display font-black text-3xl sm:text-4xl" style={{ color: "#0f2818" }}>
+                La sostenibilità è <em className="italic" style={{ color: "#1a4d2e" }}>«un dato di fatto»</em>
               </h2>
-              <p className="mt-6 text-cream/80 leading-relaxed">
+              <p className="mt-6 leading-relaxed" style={{ color: "#1a2e1a" }}>
                 Il mio libro su perché la sostenibilità d'impresa non è più un'opzione, ma un dato di fatto. Un percorso pratico tra normativa, dati e metodo per chi guida una PMI e vuole trasformare gli obblighi ESG in vantaggio competitivo.
               </p>
-              <p className="mt-4 text-cream/70 leading-relaxed text-sm">
+              <p className="mt-4 leading-relaxed text-sm" style={{ color: "#3d4f3d" }}>
                 Di Patrizia Parca.
               </p>
               <a
                 href="https://www.amazon.it/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-2 bg-teal text-bg px-6 py-3 font-mono uppercase text-xs tracking-[0.18em] hover:bg-cream transition-colors"
+                className="mt-8 inline-flex items-center gap-2 px-6 py-3 font-mono uppercase text-xs tracking-[0.18em] transition-colors hover:opacity-90"
+                style={{ backgroundColor: "#0f2818", color: "#dde6d3" }}
               >
                 Acquista su Amazon →
               </a>
